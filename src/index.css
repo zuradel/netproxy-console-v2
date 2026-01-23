@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .transition-smooth {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.04, 0.88, 0.66, 0.69);
+    transition-duration: 100ms;
+  }
+
+  .pseudo-border-top {
+    position: relative;
+    --border-color: #2d4f76;
+  }
+
+  .pseudo-border-top::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* chỉnh vừa khít border-2 (nếu border-1 thì để 0) */
+    left: -2px; /* khớp với độ dày border thật */
+    right: -2px;
+    height: calc(50% + 2px); /* chỉ chiếm nửa trên của nút */
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-top: 2px solid var(--border-color);
+    pointer-events: none;
+    transition: border-color 0.3s;
+    z-index: 10;
+  }
+
+  .pseudo-border-top-orange {
+    position: relative;
+    --border-color: #ff8a4d;
+  }
+
+  .pseudo-border-top-orange::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* chỉnh vừa khít border-2 (nếu border-1 thì để 0) */
+    left: -2px; /* khớp với độ dày border thật */
+    right: -2px;
+    height: calc(50% + 2px); /* chỉ chiếm nửa trên của nút */
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-top: 2px solid #ffbc99;
+    pointer-events: none;
+    transition: border-color 0.3s;
+    z-index: 10;
+  }
+
+  .no-pseudo::before {
+    content: none !important;
+  }
+
+  /* .pseudo-border-top:hover::before {
+    display: none;
+  } */
+
+  /* .group:hover .pseudo-border-top::before {
+    display: none;
+  } */
+
+  .center {
+    @apply flex justify-center items-center;
+  }
+}
+
+@layer base {
+  /* Title */
+  h1 {
+    @apply text-[48px] font-averta not-italic font-semibold leading-[120%] tracking-[-1.44px];
+  }
+  h2 {
+    @apply text-[33px] font-averta not-italic font-semibold leading-[120%] tracking-[-0.66px];
+  }
+  h3 {
+    @apply text-text-hi dark:text-text-hi-dark text-[24px] font-averta not-italic font-semibold leading-[120%] tracking-[-0.48px];
+  }
+  h4 {
+    @apply text-text-hi dark:text-text-hi-dark text-[13px] md:text-[20px] font-averta font-semibold leading-[120%] tracking-[-0.3px];
+  }
+
+  /* Nav */
+  nav {
+    @apply text-sm font-medium tracking-wide;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box !important;
+  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-bg-canvas dark:bg-bg-canvas-dark;
+}
+
+/* Ẩn scrollbar trên Chrome, Safari, Edge */
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Scrollbar styles (Tailwind + theme-aware) */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: theme('colors.text-lo'); /* sáng */
+  border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: theme('colors.text-lo-dark'); /* tối */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: theme('colors.text-lo'); /* hover sáng */
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: theme('colors.text-lo-dark'); /* hover tối */
+}
+
+/* Ẩn thanh cuộn ngang, giữ thanh dọc */
+.hide-scroll-x {
+  overflow-x: hidden; /* Không cho cuộn ngang */
+  overflow-y: auto; /* Vẫn cho cuộn dọc */
+}
+
+/* Chỉ ẩn thanh cuộn ngang (phần track bên dưới) */
+.hide-scroll-x::-webkit-scrollbar:horizontal {
+  display: none; /* Ẩn thanh ngang */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE và Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.font-ibm-plex-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.shadow-test {
+  box-shadow:
+    0 20px 24px -4px rgba(0, 0, 0, 0.08),
+    0 8px 8px -4px rgba(0, 0, 0, 0.03);
+}
+
+.fixed-right-shadow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px; /* dịch ra ngoài chút */
+  width: 1px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.dark .fixed-right-shadow::before {
+  box-shadow:
+    -1px 0 0 0 #2e4560,
+    -1px 0 3px 0 rgba(0, 0, 0, 0.1),
+    -1px 0 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.fixed-left-shadow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px; /* dịch ra ngoài chút */
+  width: 1px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.dark .fixed-left-shadow::after {
+  box-shadow:
+    -1px 0 0 0 #2e4560,
+    -1px 0 3px 0 rgba(0, 0, 0, 0.1),
+    -1px 0 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+@keyframes moveBlur {
+  0% {
+    transform: translateX(0) rotate(30deg);
+  }
+  100% {
+    transform: translateX(var(--move-distance, 400px)) rotate(30deg);
+  }
+}
+
+.animate-moveBlur {
+  animation: moveBlur var(--move-duration, 2s) infinite linear;
+}
+
+/* custom utility cho pause/run */
+.paused {
+  animation-play-state: paused;
+}
+.running {
+  animation-play-state: running;
+}
+
+/* Tạo class để disable transition tạm thời */
+/* Tắt mọi transition khi đổi theme (để tránh flicker) */
+.disable-transitions *,
+.disable-transitions *::before,
+.disable-transitions *::after {
+  transition: background-color 0.3s ease-out;
+}
+
+.text-underline {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* Style for row disabled */
+tr.row-disabled {
+  opacity: 0.2;
+}
+
+/* 🚫 chặn toàn bộ click + hover + focus */
+tr.row-disabled,
+tr.row-disabled * {
+  pointer-events: none;
+}
+
+/* 🚫 đảm bảo không có hover highlight */
+tr.row-disabled:hover td {
+  background: inherit !important;
+}
+
+/* cursor disabled */
+tr.row-disabled {
+  cursor: not-allowed;
+}
+
+/* Style for row loading */
+
+/* Row đang loading */
+/* ===============================
+   Row Skeleton (Single file)
+   =============================== */
+
+tr {
+  position: relative;
+}
+
+td {
+  position: relative;
+  background-clip: padding-box;
+}
+
+/* -------------------------------
+   Row loading
+-------------------------------- */
+tr.row-loading {
+  pointer-events: none;
+  background-image: linear-gradient(90deg, rgba(240, 240, 240, 0.6) 25%, rgba(220, 220, 220, 0.8) 37%, rgba(240, 240, 240, 0.6) 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.2s ease-in-out infinite;
+}
+
+tr.row-loading td {
+  background-color: transparent; /* QUAN TRỌNG */
+  opacity: 0.3;
+}
+
+/* Dark mode – chỉ override background-image */
+.dark tr.row-loading {
+  background-image: linear-gradient(90deg, rgba(22, 42, 62, 0.55) 25%, rgba(44, 74, 104, 0.85) 37%, rgba(22, 42, 62, 0.55) 63%);
+}
+
+tr.row-loading td > .sticky {
+  position: sticky;
+  left: 0; /* hoặc right */
+
+  opacity: 1;
+  z-index: 5;
+
+  /* Solid background (che nội dung bên dưới) */
+  background-color: #ffffff;
+}
+
+/* Skeleton riêng cho sticky */
+tr.row-loading td > .sticky::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(90deg, rgba(22, 42, 62, 0.55) 25%, rgba(44, 74, 104, 0.85) 37%, rgba(22, 42, 62, 0.55) 63%);
+
+  background-size: 400% 100%;
+  animation: skeleton-loading 12.2s linear infinite;
+
+  z-index: 6;
+  pointer-events: none;
+}
+
+/* Dark mode skeleton cho sticky */
+@media (prefers-color-scheme: dark) {
+  tr.row-loading td > .sticky::after {
+    background: linear-gradient(90deg, rgba(60, 60, 60, 0.8) 25%, rgba(90, 90, 90, 1) 37%, rgba(60, 60, 60, 0.8) 63%);
+  }
+}
+/* -------------------------------
+   Sticky cell
+-------------------------------- */
+
+/* -------------------------------
+   Animation
+-------------------------------- */
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
