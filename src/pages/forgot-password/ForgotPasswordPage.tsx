@@ -158,7 +158,7 @@ export const ForgotPasswordPage: React.FC = () => {
               }}
               placeholder={t('language') || 'Ngôn ngữ'}
               placement="bottom"
-              className="w-full h-10 dark:pseudo-border-top dark:border-transparent dark:bg-[#2B405A] font-inter"
+              className="w-full h-10 dark:pseudo-border-top dark:border-transparent dark:bg-bg-tertiary-dark font-inter"
             />
           </div>
           <div className="text-center">© {businessName}</div>

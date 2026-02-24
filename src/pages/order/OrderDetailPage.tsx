@@ -673,7 +673,7 @@ const OrderDetailPage = () => {
                     />
                     <IconButton
                       icon={<Reload />}
-                      iconClassName="text-[#FDBE02] hover:!text-[#FDBE02] dark:text-[#FDBE02]"
+                      iconClassName="text-yellow hover:!text-yellow dark:text-yellow-dark"
                       className="rounded-lg w-8 h-8"
                       onClick={async () => {
                         const rowIndex = subscriptions?.findIndex((sub) => sub.id === record.id) || 0;

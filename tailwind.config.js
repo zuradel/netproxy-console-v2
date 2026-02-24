@@ -71,18 +71,18 @@ export default {
         'border-element': '#F1F2F4',
         'border-element-dark': '#1E344E',
 
-        // Primary
-        primary: '#FF7530',
-        'primary-dark': '#FF8A4D',
+        // Primary (Teal)
+        primary: '#14B8A6',
+        'primary-dark': '#2DD4BF',
 
-        'primary-hi': '#FF6619',
-        'primary-hi-dark': '#FFBC99',
+        'primary-hi': '#0D9488',
+        'primary-hi-dark': '#5EEAD4',
 
-        'primary-border': '#FFBB99',
-        'primary-border-dark': '#794006',
+        'primary-border': '#99F6E4',
+        'primary-border-dark': '#115E59',
 
-        'primary-bg': '#FFF5F0',
-        'primary-bg-dark': '#612405',
+        'primary-bg': '#F0FDFA',
+        'primary-bg-dark': '#134E4A',
 
         // Red
         red: '#D14F47',
@@ -162,10 +162,10 @@ export default {
         sidebar: '16px 0 16px 16px'
       },
       backgroundImage: {
-        'blue-gradient': 'linear-gradient(180deg, #00A7FF 0%, #0075F4 100%)',
-        'yellow-gradient': 'linear-gradient(180deg, #FFD812 0%, #FF8900 100%)',
-        'green-gradient': 'linear-gradient(168deg, #1BCE74 40.83%, #00BFA1 91.21%)',
-        'purple-gradient': 'linear-gradient(168deg, #58B3F1 -1.52%, #3B55F0 48.86%)'
+        'teal-gradient': 'linear-gradient(180deg, #2DD4BF 0%, #0D9488 100%)',
+        'teal-light-gradient': 'linear-gradient(180deg, #5EEAD4 0%, #14B8A6 100%)',
+        'green-gradient': 'linear-gradient(168deg, #34D399 40.83%, #10B981 91.21%)',
+        'cyan-gradient': 'linear-gradient(168deg, #67E8F9 -1.52%, #06B6D4 48.86%)'
       },
       breakpoints: {
         '2xl': '1440px',

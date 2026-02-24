@@ -227,7 +227,7 @@ const HistoryPage: React.FC = () => {
         render: (value) => {
           const amount = Number(value);
           const formattedAmount = amount.toFixed(2);
-          return <span className="text-[#ff1818]">{amount > 0 ? `-$${formattedAmount}` : `$${formattedAmount}`}</span>;
+          return <span className="text-red dark:text-red-dark">{amount > 0 ? `-$${formattedAmount}` : `$${formattedAmount}`}</span>;
         }
       },
       {

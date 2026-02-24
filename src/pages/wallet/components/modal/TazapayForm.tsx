@@ -124,7 +124,7 @@ export const TazapayForm: React.FC<TazapayFormProps> = ({
           placeholder={t('pickCountry')}
           optionClassName="max-h-[100px]"
           placement="top-right"
-          className="w-full h-10 dark:bg-[#2B405A] dark:pseudo-border-top dark:border-transparent"
+          className="w-full h-10 dark:bg-bg-tertiary-dark dark:pseudo-border-top dark:border-transparent"
         />
       </div>
 

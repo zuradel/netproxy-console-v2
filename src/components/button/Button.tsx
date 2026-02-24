@@ -67,7 +67,7 @@ export const Button: FC<ButtonProps> = ({
       <span className="absolute inset-0 overflow-hidden rounded-[100px] pointer-events-none">
         <span
           className={twMerge(
-            'absolute -bottom-[22px] -top-[22px] -left-[27px] w-[22px] bg-[rgb(255,161,46)] blur-[10px] rotate-[30deg] mix-blend-overlay opacity-0 animate-moveBlur',
+            'absolute -bottom-[22px] -top-[22px] -left-[27px] w-[22px] bg-[rgb(20,184,166)] blur-[10px] rotate-[30deg] mix-blend-overlay opacity-0 animate-moveBlur',
             blurClasses
           )}
         />

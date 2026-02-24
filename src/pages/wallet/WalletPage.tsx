@@ -427,7 +427,7 @@ const WalletPage: React.FC = () => {
                 }}
                 placeholder={t('wallet.SelectMethod') || 'Select a top-up method'}
                 placement="bottom"
-                className="w-full h-10 dark:pseudo-border-top dark:border-transparent dark:bg-[#2B405A] font-inter"
+                className="w-full h-10 dark:pseudo-border-top dark:border-transparent dark:bg-bg-tertiary-dark font-inter"
               />
             </div>
 

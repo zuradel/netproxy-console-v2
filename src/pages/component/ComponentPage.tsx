@@ -299,7 +299,7 @@ const ComponentPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
           <OverViewCard
             icon={
-              <div className="flex justify-center items-center w-10 h-10 bg-blue-gradient rounded-[4px] text-white">
+              <div className="flex justify-center items-center w-10 h-10 bg-teal-gradient rounded-[4px] text-white">
                 <WalletCreditCardFilled />
               </div>
             }
@@ -311,7 +311,7 @@ const ComponentPage = () => {
 
           <OverViewCard
             icon={
-              <div className="flex justify-center items-center w-10 h-10 bg-yellow-gradient rounded-[4px] text-white">
+              <div className="flex justify-center items-center w-10 h-10 bg-teal-light-gradient rounded-[4px] text-white">
                 <CartFilled />
               </div>
             }

@@ -249,7 +249,7 @@ const DashboardPage = () => {
       <OverViewCard
         key="4"
         icon={
-          <div className="flex justify-center items-center w-10 h-10 bg-purple-gradient rounded-[4px] text-white">
+          <div className="flex justify-center items-center w-10 h-10 bg-cyan-gradient rounded-[4px] text-white">
             <Person className="text-text-hi-dark" />
           </div>
         }
@@ -340,7 +340,7 @@ const DashboardPage = () => {
               <OverViewCard
                 key="1"
                 icon={
-                  <div className="flex justify-center items-center w-10 h-10 bg-blue-gradient rounded-[4px] text-white">
+                  <div className="flex justify-center items-center w-10 h-10 bg-teal-gradient rounded-[4px] text-white">
                     <WalletCreditCardFilled />
                   </div>
                 }
@@ -360,7 +360,7 @@ const DashboardPage = () => {
               <OverViewCard
                 key="2"
                 icon={
-                  <div className="flex justify-center items-center w-10 h-10 bg-yellow-gradient rounded-[4px] text-white">
+                  <div className="flex justify-center items-center w-10 h-10 bg-teal-light-gradient rounded-[4px] text-white">
                     <CartFilled />
                   </div>
                 }

@@ -34,7 +34,7 @@
 
   .pseudo-border-top-orange {
     position: relative;
-    --border-color: #ff8a4d;
+    --border-color: #2DD4BF;
   }
 
   .pseudo-border-top-orange::before {
@@ -46,7 +46,7 @@
     height: calc(50% + 2px); /* chỉ chiếm nửa trên của nút */
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    border-top: 2px solid #ffbc99;
+    border-top: 2px solid #99F6E4;
     pointer-events: none;
     transition: border-color 0.3s;
     z-index: 10;
