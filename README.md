@@ -1,4 +1,4 @@
-# 🎛️ NetProxy Console V2
+# 🎛️ RyoProxy Console V2
 
 <div align="center">
 
@@ -33,13 +33,13 @@
 
 ## 🎯 Giới thiệu
 
-**NetProxy Console V2** là bảng điều khiển (dashboard) dành cho người dùng cuối, được xây dựng với công nghệ hiện đại nhất. Hệ thống cho phép người dùng quản lý proxy, nạp tiền, mua gói dịch vụ và theo dõi lịch sử sử dụng.
+**RyoProxy Console V2** là bảng điều khiển (dashboard) dành cho người dùng cuối, được xây dựng với công nghệ hiện đại nhất. Hệ thống cho phép người dùng quản lý proxy, nạp tiền, mua gói dịch vụ và theo dõi lịch sử sử dụng.
 
 Website hỗ trợ **đa ngôn ngữ (14 ngôn ngữ)** với giao diện đẹp mắt, hiệu ứng mượt mà và tương thích hoàn hảo với **Vercel** và **Cloudflare Pages**.
 
 Dự án này được thiết kế để kết hợp với:
 - **[Seller Portal](https://seller.prx.network/)** - Hệ thống quản lý đại lý
-- **[Landing Page](https://netproxy-index-v2.pages.dev)** - Trang giới thiệu sản phẩm
+- **[Landing Page](https://RyoProxy-index-v2.pages.dev)** - Trang giới thiệu sản phẩm
 - **[API Backend](https://api.prx.network)** - API xử lý nghiệp vụ
 
 ---
@@ -64,7 +64,7 @@ Dự án này được thiết kế để kết hợp với:
 ## 📁 Cấu trúc dự án
 
 ```
-netproxy-console-v2/
+RyoProxy-console-v2/
 │
 ├── 📂 src/
 │   ├── 📂 components/         # 🧩 UI Components tái sử dụng
@@ -155,8 +155,8 @@ netproxy-console-v2/
 #### Bước 1: Clone repository
 
 ```bash
-git clone https://github.com/lebachhiep/netproxy-console-v2.git
-cd netproxy-console-v2
+git clone https://github.com/lebachhiep/RyoProxy-console-v2.git
+cd RyoProxy-console-v2
 ```
 
 #### Bước 2: Cài đặt dependencies
@@ -219,7 +219,7 @@ Truy cập 👉 [http://localhost:5192](http://localhost:5192)
 1. Truy cập 👉 **[https://seller.prx.network/](https://seller.prx.network/)**
 2. Đăng ký tài khoản đại lý (nếu chưa có)
 3. Đăng nhập và vào **Cài đặt** → **Domain**
-4. Thêm domain bạn sẽ deploy (ví dụ: `netproxy-console-v2.vercel.app` hoặc custom domain)
+4. Thêm domain bạn sẽ deploy (ví dụ: `RyoProxy-console-v2.vercel.app` hoặc custom domain)
 5. Chờ domain được xác nhận
 
 ---
@@ -237,7 +237,7 @@ Truy cập 👉 [http://localhost:5192](http://localhost:5192)
 
 1. Click **Add New...** → **Project**
 2. Chọn **Import Git Repository**
-3. Kết nối GitHub và chọn repository `netproxy-console-v2`
+3. Kết nối GitHub và chọn repository `RyoProxy-console-v2`
 
 #### Bước 3: Cấu hình Build Settings
 
@@ -263,7 +263,7 @@ Click **Environment Variables** và thêm:
 
 Click **Deploy** và đợi quá trình hoàn tất.
 
-✅ Website sẽ có URL dạng: `https://netproxy-console-v2.vercel.app`
+✅ Website sẽ có URL dạng: `https://RyoProxy-console-v2.vercel.app`
 
 > **Nhớ:** Sau khi deploy xong, quay lại Seller Portal và thêm URL này vào danh sách domain được phép!
 
@@ -277,7 +277,7 @@ Click **Deploy** và đợi quá trình hoàn tất.
 
 1. Truy cập 👉 **[https://seller.prx.network/](https://seller.prx.network/)**
 2. Đăng ký/Đăng nhập tài khoản đại lý
-3. Vào **Cài đặt** → **Domain** → Thêm domain (ví dụ: `netproxy-console-v2.pages.dev`)
+3. Vào **Cài đặt** → **Domain** → Thêm domain (ví dụ: `RyoProxy-console-v2.pages.dev`)
 
 ---
 
@@ -299,7 +299,7 @@ Click **Deploy** và đợi quá trình hoàn tất.
 
 1. Click **Connect GitHub**
 2. Authorize Cloudflare truy cập GitHub của bạn
-3. Chọn repository: `lebachhiep/netproxy-console-v2`
+3. Chọn repository: `lebachhiep/RyoProxy-console-v2`
 4. Click **Begin setup**
 
 #### Bước 4: Cấu hình Build Settings
@@ -308,7 +308,7 @@ Click **Deploy** và đợi quá trình hoàn tất.
 
 | Mục | Giá trị |
 |-----|---------|
-| **Project name** | `netproxy-console-v2` |
+| **Project name** | `RyoProxy-console-v2` |
 | **Production branch** | `main` |
 | **Framework preset** | `React (Vite)` |
 | **Build command** | `yarn build` |
@@ -327,7 +327,7 @@ Click **Add variable** và thêm:
 
 Click **Save and Deploy** và đợi quá trình hoàn tất.
 
-✅ Website sẽ có URL dạng: `https://netproxy-console-v2.pages.dev`
+✅ Website sẽ có URL dạng: `https://RyoProxy-console-v2.pages.dev`
 
 > **Nhớ:** Sau khi deploy xong, quay lại Seller Portal và thêm URL này vào danh sách domain được phép!
 
@@ -346,18 +346,18 @@ wrangler login
 yarn build
 
 # Deploy lên Cloudflare Pages
-wrangler pages deploy dist --project-name=netproxy-console-v2
+wrangler pages deploy dist --project-name=RyoProxy-console-v2
 ```
 
 ---
 
 ## 🔗 Tích hợp Hệ thống
 
-### Hệ sinh thái NetProxy
+### Hệ sinh thái RyoProxy
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        NetProxy Ecosystem                        │
+│                        RyoProxy Ecosystem                        │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
 │   ┌─────────────────┐     ┌─────────────────┐                   │
@@ -465,8 +465,7 @@ Nếu bạn cần hỗ trợ hoặc có câu hỏi:
 
 | Kênh | Liên kết |
 |------|----------|
-| 📧 **Email** | ketoan@upgo.io |
-| 💬 **Telegram** | [@NetProxy_Support](https://t.me/NetProxy_Support) |
+| 💬 **Telegram** | [@RyoProxy_Support](https://t.me/RyoProxy_Support) |
 | 🌐 **Seller Portal** | [seller.prx.network](https://seller.prx.network/) |
 | 📚 **API Docs** | [api.prx.network/docs](https://api.prx.network/docs) |
 
@@ -474,8 +473,8 @@ Nếu bạn cần hỗ trợ hoặc có câu hỏi:
 
 <div align="center">
 
-**Made with ❤️ by NetProxy Team**
+**Made with ❤️ by RyoProxy Team**
 
-© 2024 NetProxy. All rights reserved.
+© 2024 RyoProxy. All rights reserved.
 
 </div>

@@ -438,7 +438,7 @@ const WalletPage: React.FC = () => {
               <p className="text-sm flex-1 text-text-lo dark:text-text-lo-dark font-medium">
                 {t('wallet.EULA')}
                 <a
-                  href="https://netproxy.io/en/term-service"
+                  href="https://ryoproxy.io/en/term-service"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue dark:text-blue-dark underline"
@@ -447,7 +447,7 @@ const WalletPage: React.FC = () => {
                 </a>{' '}
                 {t('wallet.EULA_connect')}
                 <a
-                  href="https://netproxy.io/en/privacy-policy"
+                  href="https://ryoproxy.io/en/privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue dark:text-blue-dark underline"
