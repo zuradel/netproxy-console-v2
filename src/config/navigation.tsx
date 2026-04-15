@@ -7,8 +7,6 @@ import {
   ChatWarning,
   ChatWarningFilled,
   ClockBillFilled,
-  CloudSwapFilled,
-  CloudSwapOutlined,
   DashboardFilled,
   DashboardOutlined,
   DocumentSync,
@@ -129,21 +127,6 @@ export const navigationSections = (t: (key: string) => string): NavigationSectio
     {
       title: 'KHÁC',
       routes: [
-        {
-          title: (
-            <div className="flex items-center flex-1 justify-between w-full">
-              <span>{t('resellerProgram')}</span>
-              <Open className="text-blue dark:text-blue-dark" />
-            </div>
-          ),
-          icon: <CloudSwapFilled />,
-          collapsedIcon: <CloudSwapOutlined />,
-          iconClass: 'text-pink',
-          breadcrumbIcon: <CloudSwapFilled width={32} height={32} className="text-pink" />,
-          externalUrl: 'https://seller.prx.network',
-          name: '/reseller',
-          breadcrumb: t('resellerProgram')
-        },
         {
           title: (
             <div className="flex items-center flex-1 justify-between w-full">
